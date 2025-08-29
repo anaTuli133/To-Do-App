@@ -1,5 +1,5 @@
 <?php
-// For demonstration: save tasks to file (instead of database)
+// save tasks to file 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $task = $_POST['task'];
     file_put_contents("tasks.txt", $task . "\n", FILE_APPEND);
