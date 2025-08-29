@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do App-Anamika</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1 class="title">✨ My To-Do List ✨</h1>
+      <p class="subtitle">Stay organized! Stay productive! </p>
+    </header>
+
+    <!-- Input -->
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter a new task..."/>
+      <button id="addBtn" onclick="addTask()">➕ Add</button>
+    </div>
+
+    <!-- Filters + Counters -->
+    <div class="controls">
+      <div class="filters">
+        <button data-filter="all" class="active" onclick="setFilter('all')">All 
+          <span class="badge" id="allCount">0</span>
+        </button>
+        <button data-filter="pending" onclick="setFilter('pending')">Pending 
+          <span class="badge" id="pendingCount">0</span>
+        </button>
+        <button data-filter="completed" onclick="setFilter('completed')">Completed 
+          <span class="badge" id="completedCount">0</span>
+        </button>
+      </div>
+      <div class="counter">
+        <span id="remainingCount">0</span> tasks left
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="allView" class="view active">
+      <h3 class="section-title">Pending</h3>
+      <ul id="pendingList_all" class="task-list"></ul>
+
+      <h3 class="section-title">Completed</h3>
+      <ul id="completedList_all" class="task-list"></ul>
+    </section>
+
+    <section id="pendingView" class="view">
+      <h3 class="section-title">Pending</h3>
+      <ul id="pendingList_only" class="task-list"></ul>
+    </section>
+
+    <section id="completedView" class="view">
+      <h3 class="section-title">Completed</h3>
+      <ul id="completedList_only" class="task-list"></ul>
+    </section>
+
+    <!-- Clear All -->
+    <div class="clear-area">
+      <button class="clear-btn" onclick="clearAll()">🗑️ Clear All</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with 💜 by <b>Anamika</b></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
