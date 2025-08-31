@@ -13,7 +13,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(-45deg, #4e54c8, #8f94fb, #6a11cb, #2575fc);  animation: bgShift 16s ease infinite;
+  background: linear-gradient(-45deg, #4e54c8, #8f94fb, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: bgShift 16s ease infinite;
 }
 
 @keyframes bgShift {
